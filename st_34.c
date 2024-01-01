@@ -7,7 +7,7 @@ int main(){
     char str[101];
     char a_word;
     int letter[26] = {0};   //'a'->0
-    int i, letter_to_index;
+    int i;
     scanf("%s", str);
     for (i = 0; str[i] != '\0';i++){
         a_word = str[i];
