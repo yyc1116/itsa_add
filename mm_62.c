@@ -9,9 +9,9 @@ int digitToDecimal(char digit, int base) {
     // else if (digit >= 'A' && digit <= 'F') {
     //     return 10 + digit - 'A';
     // } 
-    else if (digit >= 'a' && digit <= 'f') {
-        return 10 + digit - 'a';
-    } 
+    else if (digit >= 'a' && digit <= 'f') {    //Why +10
+        return 10 + digit - 'a';        //in hexadecimal notation, after '9',
+    }                                    //the characters 'A' to 'F' (or 'a' to 'f') represent the values 10 to 15, respectively.  10為基礎, 加上差距
     else {
         printf("Invalid input digit: %c\n", digit);
         exit(1);
@@ -20,9 +20,9 @@ int digitToDecimal(char digit, int base) {
 
 // Function to convert decimal value to digit
 char decimalToDigit(int value) {
-    if (value >= 0 && value <= 9) {
+    if (value >= 0 && value <= 9) {        //num
         return value + '0';
-    } else {
+    } else {                    //words
         return value - 10 + 'a';
     }
 }
